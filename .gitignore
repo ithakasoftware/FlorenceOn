@@ -1,0 +1,7 @@
+/.classpath
+*.class
+/gradle
+/.gradle
+/.gitattributes
+/.project
+/settings.gradle
