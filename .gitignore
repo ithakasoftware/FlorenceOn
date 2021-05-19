@@ -2,6 +2,8 @@
 *.class
 /gradle
 /.gradle
+.gradle
+build
 /.gitattributes
 /.project
 /settings.gradle
