@@ -1,0 +1,25 @@
+server:
+ port: 8089
+ 
+spring:
+ datasource:
+  username: sa
+  password: password
+  url: jdbc:mysql://mysql-standalone:3306/test
+  driver-class-name: com.mysql.cj.jdbc.Driver
+ jpa:
+  properties:
+   hibernate: 
+    dialect: org.hibernate.dialect.MySQL5Dialect
+    ddl-auto: update
+  show-sql: true
+
+#OpenAPI
+springdoc:
+  packagesToScan: com.ithakasoftware.florenceon
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui/index.html
+    disable-swagger-default-url: true
+    url: /v3/api-docs
