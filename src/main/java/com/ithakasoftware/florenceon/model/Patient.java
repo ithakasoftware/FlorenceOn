@@ -7,15 +7,16 @@ import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@Entity
+@NoArgsConstructor
+@Entity(name = "Patient")
 public class Patient {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private final long id;
-	private final long cpf;
-	private final String name;
+	private long id;
+	private long cpf;
+	private String name;
 }

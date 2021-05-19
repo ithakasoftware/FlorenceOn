@@ -7,15 +7,16 @@ import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-@AllArgsConstructor
-@Entity
+@NoArgsConstructor
+@Entity(name = "Room")
 public class Room {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private final long id;
-	private final String name;
+	private  long id;
+	private String name;
 	
 }
