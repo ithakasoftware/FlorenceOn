@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.ithakasoftware.florenceon.model.Nurse;
 
 @Repository
-public interface NurseRepository extends CrudRepository<Nurse, Long> {
+public interface NurseRepository extends CrudRepository<Nurse, Long>{
 
 }

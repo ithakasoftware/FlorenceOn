@@ -1,29 +1,15 @@
 package com.ithakasoftware.florenceon.service;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import com.ithakasoftware.florenceon.model.Room;
-import com.ithakasoftware.florenceon.repository.RoomRepository;
 
 @Service
-public class RoomService {
+public class RoomService  extends ServiceOn<Room> {
 
-	@Autowired
-	private RoomRepository roomRepository;
-	
-	public void save(Room room) {
-		roomRepository.save(room);
+	public RoomService(CrudRepository<Room, Long> repository) {
+		super(repository);
+		// TODO Auto-generated constructor stub
 	}
-	
-	public Iterable<Room> findAll() {
-		return roomRepository.findAll();
-	}
-	
-	public Optional<Room> findById(long id) {
-		return roomRepository.findById(id);
-	}
-	
 }

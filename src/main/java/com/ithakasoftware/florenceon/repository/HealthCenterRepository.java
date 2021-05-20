@@ -3,9 +3,9 @@ package com.ithakasoftware.florenceon.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.ithakasoftware.florenceon.model.Patient;
+import com.ithakasoftware.florenceon.model.HealthCenter;
 
 @Repository
-public interface PatientRepository extends CrudRepository<Patient, Long>{ 
+public interface HealthCenterRepository extends CrudRepository<HealthCenter, Long>{
 
 }

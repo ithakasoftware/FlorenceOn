@@ -1,29 +1,15 @@
 package com.ithakasoftware.florenceon.service;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 import com.ithakasoftware.florenceon.model.Patient;
-import com.ithakasoftware.florenceon.repository.PatientRepository;
 
 @Service
-public class PatientService {
+public class PatientService  extends ServiceOn<Patient> {
 
-	@Autowired
-	private PatientRepository patientRepository;
-	
-	public void save(Patient patient) {
-		patientRepository.save(patient);
+	public PatientService(CrudRepository<Patient, Long> repository) {
+		super(repository);
+		// TODO Auto-generated constructor stub
 	}
-	
-	public Iterable<Patient> findAll() {
-		return patientRepository.findAll();
-	}
-	
-	public Optional<Patient> findById(long id) {
-		return patientRepository.findById(id);
-	}
-	
 }

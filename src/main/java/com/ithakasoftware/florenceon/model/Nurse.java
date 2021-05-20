@@ -13,12 +13,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = "Nurse")
-public class Nurse {
+@Entity(name = "tab_nurse")
+public class Nurse  implements DataModel{
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private long coren;
 	private String name;
