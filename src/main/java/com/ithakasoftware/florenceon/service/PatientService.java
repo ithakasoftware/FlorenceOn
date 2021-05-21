@@ -3,10 +3,10 @@ package com.ithakasoftware.florenceon.service;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
-import com.ithakasoftware.florenceon.model.Patient;
+import com.ithakasoftware.florenceon.model.impl.Patient;
 
 @Service
-public class PatientService  extends ServiceOn<Patient> {
+public class PatientService  extends CrudService<Patient> {
 
 	public PatientService(CrudRepository<Patient, Long> repository) {
 		super(repository);

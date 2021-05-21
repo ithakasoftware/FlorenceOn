@@ -4,14 +4,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ithakasoftware.florenceon.controller.CrudController;
-import com.ithakasoftware.florenceon.model.Patient;
-import com.ithakasoftware.florenceon.service.ServiceOn;
+import com.ithakasoftware.florenceon.model.impl.Patient;
+import com.ithakasoftware.florenceon.service.CrudService;
 
 @RestController
 @RequestMapping("/patient")
-public class PatientControllerImpl extends CrudController<Patient>{
+public class PatientController extends CrudController<Patient>{
 	
-	public PatientControllerImpl(ServiceOn <Patient> patientService) {
+	public PatientController(CrudService <Patient> patientService) {
 		super(patientService);
 	}
 	

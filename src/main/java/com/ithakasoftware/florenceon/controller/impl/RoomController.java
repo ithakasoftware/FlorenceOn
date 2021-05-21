@@ -4,14 +4,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ithakasoftware.florenceon.controller.CrudController;
-import com.ithakasoftware.florenceon.model.Room;
-import com.ithakasoftware.florenceon.service.ServiceOn;
+import com.ithakasoftware.florenceon.model.impl.Room;
+import com.ithakasoftware.florenceon.service.CrudService;
 
 @RestController
 @RequestMapping("/room")
-public class RoomControllerImpl extends CrudController<Room>{
+public class RoomController extends CrudController<Room>{
 	
-	public RoomControllerImpl(ServiceOn <Room> roomService) {
+	public RoomController(CrudService <Room> roomService) {
 		super(roomService);
 	}
 }
